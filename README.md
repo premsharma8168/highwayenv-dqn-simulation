@@ -101,10 +101,7 @@ Press **Ctrl + C** to stop the demo anytime.
 
 ## 🧑‍💻 Author
 
-**Prem Sharma**
-B.Tech CSE (III Year – V Semester)
-Department of Computer Engineering and Applications
-GLA University, Mathura
+**Prem Narayan Sharma**
 📧 [premnsharma2005@outlook.com](mailto:premnsharma2005@outlook.com)
 
 ---
