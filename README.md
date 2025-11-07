@@ -1,29 +1,30 @@
-# 🚗 AI Safe Overtake — Reinforcement Learning Project
+# 🚗 Simulation-Oriented Debugging Agent for Autonomous Car Overtaking
 
-An AI-driven reinforcement learning project that trains an autonomous vehicle agent to **safely overtake other cars** in a highway environment using **Deep Q-Networks (DQN)**.
-Built with **PyTorch**, **Stable Baselines3**, and **Highway-Env**, this project demonstrates safe, realistic driving behavior through a custom reward system and GPU-accelerated learning.
+An **AI-powered Reinforcement Learning project** that trains an autonomous vehicle agent to perform **safe and intelligent overtaking maneuvers** on highways.
+This system leverages **Simulation-Oriented Debugging** to monitor, analyze, and optimize overtaking decisions using **Deep Q-Networks (DQN)** with **PyTorch** and **Stable Baselines3**.
 
 ---
 
 ## 🧩 Features
 
-* 🧠 **Custom Reward Function** — encourages smooth, collision-free, and realistic overtaking.
-* ⚙️ **GPU Acceleration** — optimized using CUDA for faster training.
-* 🎮 **Real-Time Demo** — renders a live simulation using Matplotlib.
+* 🧠 **Simulation-Oriented Debugging** — continuously evaluates and adjusts overtaking logic during simulation.
+* ⚙️ **Custom Reward Function** — promotes smooth, safe, and realistic driving behavior.
+* 🚀 **GPU-Accelerated Training** — powered by CUDA for efficient learning.
+* 🎮 **Real-Time Visualization** — displays live simulation with Matplotlib.
+* 💾 **Auto Model Loader** — detects and loads the latest trained model `.zip` file automatically.
 * 🧱 **Modular Design** — separate scripts for training and demo execution.
-* 💾 **Auto Model Detection** — automatically loads the latest trained `.zip` model file.
 
 ---
 
 ## 🗂️ Project Structure
 
 ```
-📦 AI_Safe_Overtake/
+📦 Simulation-Oriented-Debugging-Agent/
 │
-├── main.py                  # Train the RL agent (DQN model)
-├── demo_final_autoload.py   # Run the trained model and visualize behavior
-├── rl_overtake_safe_realistic_v2.zip   # Trained model (auto-generated)
-├── output.jpg               # Optional demo screenshot
+├── main.py                  # Trains the DQN agent (safe overtaking logic)
+├── demo_final_autoload.py   # Demonstrates the trained model live
+├── rl_overtake_safe_realistic_v2.zip   # Generated model after training
+├── output.jpg               # (Optional) Screenshot of simulation output
 └── README.md
 ```
 
@@ -31,12 +32,17 @@ Built with **PyTorch**, **Stable Baselines3**, and **Highway-Env**, this project
 
 ## ⚙️ Installation
 
-Make sure you have Python **3.9+** and CUDA-enabled GPU (optional but recommended).
+### Prerequisites
+
+* Python **3.9+**
+* CUDA-compatible GPU (optional but recommended)
+
+### Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/<your-username>/AI_Safe_Overtake.git
-cd AI_Safe_Overtake
+# Clone this repository
+git clone https://github.com/<your-username>/Simulation-Oriented-Debugging-Agent.git
+cd Simulation-Oriented-Debugging-Agent
 
 # Install dependencies
 pip install torch stable-baselines3 highway-env gymnasium matplotlib numpy
@@ -52,70 +58,64 @@ pip install torch stable-baselines3 highway-env gymnasium matplotlib numpy
 python main.py
 ```
 
-This script:
+This will:
 
-* Configures the highway environment.
-* Trains a DQN agent for 150,000 timesteps.
-* Saves the model as `rl_overtake_safe_realistic_v2.zip`.
+* Configure the **highway simulation** (`highway-v0`)
+* Train a **Deep Q-Network (DQN)** for 150,000 timesteps
+* Save the trained model as `rl_overtake_safe_realistic_v2.zip`
 
 ---
 
 ### 🎬 Run the Demo
 
-After training (or if a model already exists):
-
 ```bash
 python demo_final_autoload.py
 ```
 
-The script will:
+The demo script will:
 
-* Auto-detect the model `.zip` file.
-* Load it on GPU.
-* Launch a real-time driving simulation.
-* Show live rewards per timestep.
+* Auto-detect the latest model `.zip` file
+* Load the model on GPU
+* Render a **live simulation** of overtaking behavior
+* Display real-time reward updates
 
-Press **Ctrl + C** to stop the demo anytime.
+Press **Ctrl + C** anytime to stop the simulation safely.
 
 ---
 
-## 🧠 Technical Details
+## 🧠 Technical Overview
 
-| Component       | Description                                                      |
-| --------------- | ---------------------------------------------------------------- |
-| **Algorithm**   | DQN (Deep Q-Network)                                             |
-| **Framework**   | Stable Baselines3                                                |
-| **Environment** | highway-env (`highway-v0`)                                       |
-| **Observation** | Kinematics                                                       |
-| **Key Rewards** | Safe distance, smooth driving, overtaking success, crash penalty |
+| Component                  | Description                                                     |
+| -------------------------- | --------------------------------------------------------------- |
+| **Algorithm**              | DQN (Deep Q-Network)                                            |
+| **Framework**              | Stable Baselines3                                               |
+| **Simulation Environment** | highway-env (`highway-v0`)                                      |
+| **Observation Type**       | Kinematics                                                      |
+| **Reward Strategy**        | Safety, smooth speed, lane change efficiency, collision penalty |
 
 ---
 
 ## 📊 Outputs
 
-* ✅ `rl_overtake_safe_realistic_v2.zip` — Trained model
-* 🎥 Real-time simulation window
-* 🖥️ Step-by-step console rewards and episode summaries
+* 🧩 **Trained Model:** `rl_overtake_safe_realistic_v2.zip`
+* 🎥 **Live Simulation:** Real-time vehicle behavior visualization
+* 🖥️ **Console Logs:** Step-by-step rewards and total episode summary
 
 ---
 
-## 🧑‍💻 Author
+## 👨‍💻 Author
 
 **Prem Narayan Sharma**
 📧 [premnsharma2005@outlook.com](mailto:premnsharma2005@outlook.com)
 
 ---
 
-## 🏁 Notes
+## 🧾 Notes
 
-* Modify environment parameters in `make_env()` for experimentation.
-* To skip training, download and use the provided `.zip` model.
-* Works best on GPU-enabled systems.
-
----
-
-> 💡 *This project highlights the integration of AI and autonomous driving through safe, reinforcement learning–based overtaking behavior.*
+* Modify environment parameters in `make_env()` inside `main.py` for different highway conditions.
+* You can skip training by using the existing pre-trained `.zip` model.
+* Compatible with both **Windows** and **Linux**.
 
 ---
 
-Would you like me to add **GitHub badges** (like Python version, license, or “Made with ❤️”) at the top for a more aesthetic look?
+> 💡 *This project demonstrates the fusion of Reinforcement Learning and Simulation-Based Debugging for safe autonomous driving systems — focusing on efficient, explainable, and collision-free overtaking.*
