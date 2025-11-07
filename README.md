@@ -24,7 +24,7 @@ This system leverages **Simulation-Oriented Debugging** to monitor, analyze, and
 ├── main.py                  # Trains the DQN agent (safe overtaking logic)
 ├── demo_final_autoload.py   # Demonstrates the trained model live
 ├── rl_overtake_safe_realistic_v2.zip   # Generated model after training
-├── output.jpg               # (Optional) Screenshot of simulation output
+├── output.jpg               # Screenshot of simulation output
 └── README.md
 ```
 
@@ -97,6 +97,12 @@ Press **Ctrl + C** anytime to stop the simulation safely.
 
 ## 📊 Outputs
 
+Below is a sample output of the simulation after training:
+
+<p align="center">
+  <img src="output.jpg" alt="Simulation Output" width="700"/>
+</p>
+
 * 🧩 **Trained Model:** `rl_overtake_safe_realistic_v2.zip`
 * 🎥 **Live Simulation:** Real-time vehicle behavior visualization
 * 🖥️ **Console Logs:** Step-by-step rewards and total episode summary
@@ -106,6 +112,9 @@ Press **Ctrl + C** anytime to stop the simulation safely.
 ## 👨‍💻 Author
 
 **Prem Narayan Sharma**
+B.Tech CSE (III Year – V Semester)
+Department of Computer Engineering and Applications
+GLA University, Mathura
 📧 [premnsharma2005@outlook.com](mailto:premnsharma2005@outlook.com)
 
 ---
