@@ -37,16 +37,7 @@ This system leverages **Simulation-Oriented Debugging** to monitor, analyze, and
 * Python **3.9+**
 * CUDA-compatible GPU (optional but recommended)
 
-### Setup
 
-```bash
-# Clone this repository
-git clone https://github.com/<your-username>/Simulation-Oriented-Debugging-Agent.git
-cd Simulation-Oriented-Debugging-Agent
-
-# Install dependencies
-pip install torch stable-baselines3 highway-env gymnasium matplotlib numpy
-```
 
 ---
 
